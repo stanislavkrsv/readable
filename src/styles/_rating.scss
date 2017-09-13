@@ -1,0 +1,49 @@
+.rating {
+  flex: 0 1 auto;
+  width: 60px;
+}
+
+.rating__value {
+  display: block;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: all .3s;
+  background: #fff;
+}
+
+.rating--red {
+  background-color: #bf5329;
+  border: 1px solid #bf5329;
+  color: white;
+}
+
+.rating--green {
+  background-color: #2ab27b;
+  border: 1px solid #2ab27b;
+  color: white;
+}
+
+
+.rating__incr,  .rating__incr:hover, .rating__incr:active {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXRodW1icy11cCI+PHBhdGggZD0iTTE0IDlWNWEzIDMgMCAwIDAtMy0zbC00IDl2MTFoMTEuMjhhMiAyIDAgMCAwIDItMS43bDEuMzgtOWEyIDIgMCAwIDAtMi0yLjN6TTcgMjJINGEyIDIgMCAwIDEtMi0ydi03YTIgMiAwIDAgMSAyLTJoMyI+PC9wYXRoPjwvc3ZnPg==);
+}
+
+.rating__incr:hover {
+  background-color: rgba(155, 203, 91, 0.1);
+}
+.rating__incr:active {
+  background-color: rgba(155, 203, 91, 0.3) !important;
+}
+
+.rating__decr, .rating__decr:hover, .rating__decr:active {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXRodW1icy1kb3duIj48cGF0aCBkPSJNMTAgMTV2NGEzIDMgMCAwIDAgMyAzbDQtOVYySDUuNzJhMiAyIDAgMCAwLTIgMS43bC0xLjM4IDlhMiAyIDAgMCAwIDIgMi4zem03LTEzaDIuNjdBMi4zMSAyLjMxIDAgMCAxIDIyIDR2N2EyLjMxIDIuMzEgMCAwIDEtMi4zMyAySDE3Ij48L3BhdGg+PC9zdmc+);
+}
+.rating__decr:hover {
+  background-color: rgba(203, 141, 134, 0.2)
+}
+.rating__decr:active {
+  background-color: rgba(255, 178, 169, 0.84) !important;
+}

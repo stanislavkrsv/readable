@@ -1,0 +1,41 @@
+.header {
+  border-bottom: 0.1rem solid $header-border-color;
+  height: 6.5rem;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.header__logo , .header__logo a {
+  color: $header-logo-color;
+  line-height: 65px;
+  font-size: 4.0rem;
+  font-weight: 100;
+}
+
+.header__logo a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+.header__logo a:hover {
+  color: $header-logo-hover-color;
+}
+
+.header__logo a.active {
+  border-bottom: none;
+}
+
+.header__button {
+  text-align: right;
+  width: 100%;
+  line-height: 65px;
+}
+
+.header__button .active {
+  visibility: hidden;
+}

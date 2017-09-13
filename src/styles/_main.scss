@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+  min-height: 100vh;
+}
+
+body {
+  background: $body-bg;
+  font-family: $font-family-common;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: $link-color;
+}
+a:hover {
+  color: $link-hover-color;
+}
+
+
+.form__block {
+  margin-bottom: 8px;
+}
+
+.form__block--buttons {
+  border-top: 0.1rem solid $header-border-color;
+  padding-top: 20px;
+}
+
+.form__block--buttons .btn {
+  margin-right: 10px;
+}
+#root {
+  min-height: 100vh;
+}

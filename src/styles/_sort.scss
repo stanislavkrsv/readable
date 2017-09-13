@@ -1,0 +1,19 @@
+.sort {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.sort .select{
+  width: 200px;
+  float: right;
+}
+
+
+@media all and (max-device-width: 750px), (max-width: 750px) {
+  .sort {
+    margin-bottom: 20px;
+  }
+  .sort .select{
+    width: 99%;
+    float: none;
+  }
+}

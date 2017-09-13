@@ -1,0 +1,32 @@
+
+.input {
+  font-size: 1.5rem;
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: #FFF;
+  line-height: 25px;
+  padding: 3px 9px;
+  min-height: 24px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+
+.input:focus {
+  z-index: 2;
+  border-color: rgba(178,142,0,0.6);
+  box-shadow: 0 0 10px #fc0;
+}
+
+.input--xl {
+  font-size: 1.8rem;
+  line-height: 30px;
+  min-height: 30px;
+}

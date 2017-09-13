@@ -1,0 +1,12 @@
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -ms-transform: $val;
+  -o-transform: $val;
+  transform: $val;
+}
+
+@mixin appearance($val) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

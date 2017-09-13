@@ -1,0 +1,142 @@
+/* overlay react-confirm-alert styles */
+
+.react-confirm-alert-blur {
+
+}
+
+.react-confirm-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+ // opacity: 0;
+  /*
+  -webkit-animation: react-confirm-alert-fadeIn 0.2s 0.2s forwards;
+  -moz-animation: react-confirm-alert-fadeIn 0.2s 0.2s forwards;
+  -o-animation: react-confirm-alert-fadeIn 0.2s 0.2s forwards;
+  animation: react-confirm-alert-fadeIn 0.2s 0.2s forwards;
+  */
+}
+
+.react-confirm-alert {
+  width: 400px;
+  padding: 30px;
+  padding-bottom: 20px;
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+}
+
+.react-confirm-alert > h1 {
+  margin-top: 0;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.react-confirm-alert > h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.react-confirm-alert-button-group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  border-top: 0.1rem solid #efefef;
+  padding-top: 20px;
+}
+
+
+
+
+/* Buttons */
+.react-confirm-alert-button-group > button {
+  border: 1px solid $button-border-color;
+  background-color: $button-background-color;
+  color: $text-color;
+  border-radius: $button-border;
+  text-align: center;
+  justify-content: center;
+  line-height: 3.0rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration:none;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.react-confirm-alert-button-group > button:hover {
+  border-color: $button-background-hover-color;
+}
+
+.react-confirm-alert-button-group > button:active {
+  z-index: 2;
+  background-color: $button-active-color;
+  border-color: $button-active-border-color;
+  box-shadow: $button-active-shadow;
+  outline: none;
+}
+
+/* Action button */
+.react-confirm-alert-button-group > button:last-child {
+  background-color: $button-action-color;
+}
+
+.react-confirm-alert-button-group > button:last-child:active {
+  background-color: $button-action-active-color;
+}
+
+
+@-webkit-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
