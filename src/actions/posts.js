@@ -24,7 +24,9 @@ export const receivePosts = (posts) => ({
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
   return ReadableAPI.getPosts().then(posts => {
-    dispatch(receivePosts(posts))
+    dispatch(receivePosts(
+      posts.filter(post => post.deleted === false)
+    ))
   })
 }
 

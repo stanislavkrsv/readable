@@ -13,6 +13,7 @@ import {
 } from '../../actions'
 import Sort from '../Sort'
 import Rating from '../Rating'
+import NotFound from './../NotFound'
 import PostActionButtons from './PostActionButtons'
 import CommentActionButtons from './CommentActionButtons'
 import CommentEditForm from './CommentEditForm'
@@ -41,7 +42,7 @@ class Post extends Component {
 
   render(){
 
-    const { post, comments, votePost, setCommentSortColumn, commentsSortBy, voteComment } = this.props
+    const { post, postsInit, comments, votePost, setCommentSortColumn, commentsSortBy, voteComment } = this.props
     const { animation,  animationStaggerDelayBy, editCommentFormId } = this.state
 
     return(
@@ -114,6 +115,10 @@ class Post extends Component {
             <CommentCreateForm postId={post.id}/>
           </div>
         )}
+
+        {/* 404 */}
+        {(!post && postsInit) && (<NotFound/>)}
+
       </section>
     )
   }
@@ -127,6 +132,7 @@ function mapStateToProps({posts, comments}, ownProps) {
 
   return {
     post: post,
+    postsInit: posts.init,
     comments: (comments[postId]) ? comments[postId].items.sort(sortBy(comments.sortBy)) : [],
     commentsSortBy: comments.sortBy
   }

@@ -90,7 +90,7 @@ function mapStateToProps({categories, posts}, ownProps) {
       categories.items
     ),
     posts: posts.items
-      .filter((post) => post.deleted === false && (!ownProps.categoryId || post.category === ownProps.categoryId))
+      .filter((post) => (!ownProps.categoryId || post.category === ownProps.categoryId))
       .sort(sortBy(posts.sortBy)),
     sortBy: posts.sortBy,
     categoriesInit: categories.init,
