@@ -24,9 +24,7 @@ class PostActionButtons extends Component {
       confirmLabel: 'Delete',
       cancelLabel: 'Cancel',
       onConfirm: () => makeDeletePostRequest(post.id).then(()=> {
-        if (redirect === true) {
-          history.goBack();
-        }
+        redirect === true && history.goBack()
       })
     })
   }
