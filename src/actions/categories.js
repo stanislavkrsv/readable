@@ -1,7 +1,8 @@
 import * as ReadableAPI from '../utils/ReadableAPI'
-
-export const REQUEST_CATEGORIES = 'REQUEST_CATEGORIES'
-export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'
+import {
+  REQUEST_CATEGORIES,
+  RECEIVE_CATEGORIES
+} from './types'
 
 export const requestCategories = () => ({
   type: REQUEST_CATEGORIES,

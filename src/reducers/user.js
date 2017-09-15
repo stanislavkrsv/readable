@@ -1,8 +1,6 @@
-import {
-  SAVE_USER_NAME
-} from '../actions'
+import {  SAVE_USER_NAME } from '../actions/types'
 
-function user(state = { username: ''}, action) {
+function user(state = { username: '' }, action) {
 
   const { username } = action
 

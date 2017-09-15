@@ -2,17 +2,17 @@ import * as ReadableAPI from '../utils/ReadableAPI'
 import moment from 'moment'
 import uuidv4 from 'uuid/v4'
 import  { saveUserName } from './user'
-
-export const REQUEST_COMMENTS = 'REQUEST_COMMENTS'
-export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS'
-export const ADD_COMMENT = 'ADD_COMMENT'
-export const DELETE_COMMENT = 'DELETE_COMMENT'
-export const UPDATE_COMMENT = 'UPDATE_COMMENT'
-export const SET_COMMENT_SORT_COLUMN = 'SET_COMMENT_SORT_COLUMN'
-export const VOTE_COMMENT = 'VOTE_COMMENT'
-export const SET_COMMENT_OVERLAY_BLOCK = 'SET_COMMENT_OVERLAY_BLOCK'
-export const SET_NEW_COMMENT_OVERLAY_BLOCK = 'SET_NEW_COMMENT_OVERLAY_BLOCK'
-
+import {
+  REQUEST_COMMENTS,
+  RECEIVE_COMMENTS,
+  ADD_COMMENT,
+  DELETE_COMMENT,
+  UPDATE_COMMENT,
+  SET_COMMENT_SORT_COLUMN,
+  VOTE_COMMENT,
+  SET_COMMENT_OVERLAY_BLOCK,
+  SET_NEW_COMMENT_OVERLAY_BLOCK
+} from './types'
 
 export const requestComments  = () => ({
   type: REQUEST_COMMENTS,

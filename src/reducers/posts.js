@@ -1,3 +1,4 @@
+import { sortColumns } from '../actions'
 import {
   REQUEST_POSTS,
   RECEIVE_POSTS,
@@ -7,8 +8,7 @@ import {
   ADD_POST,
   UPDATE_POST,
   DELETE_POST,
-  sortColumns
-} from '../actions'
+} from '../actions/types'
 
 const initialPostState = {
   init: false,

@@ -2,15 +2,16 @@ import * as ReadableAPI from '../utils/ReadableAPI'
 import moment from 'moment'
 import uuidv4 from 'uuid/v4'
 import  { saveUserName } from './user'
-
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const SET_POST_SORT_COLUMN = 'SET_POST_SORT_COLUMN'
-export const VOTE_POST = 'VOTE_POST'
-export const SET_POST_OVERLAY_BLOCK = 'SET_POST_OVERLAY_BLOCK'
-export const ADD_POST = 'ADD_POST'
-export const UPDATE_POST = 'UPDATE_POST'
-export const DELETE_POST = 'DELETE_POST'
+import {
+  REQUEST_POSTS,
+  RECEIVE_POSTS,
+  SET_POST_SORT_COLUMN,
+  VOTE_POST,
+  SET_POST_OVERLAY_BLOCK,
+  ADD_POST,
+  UPDATE_POST,
+  DELETE_POST
+} from './types'
 
 export const requestPosts = () => ({
   type: REQUEST_POSTS,

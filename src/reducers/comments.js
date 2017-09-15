@@ -1,3 +1,4 @@
+import { sortColumns } from '../actions/comments'
 import {
   REQUEST_COMMENTS,
   RECEIVE_COMMENTS,
@@ -8,8 +9,7 @@ import {
   ADD_COMMENT,
   DELETE_COMMENT,
   UPDATE_COMMENT,
-  sortColumns
-} from '../actions'
+} from '../actions/types'
 
 const initialCommentsState = {
   sortBy : sortColumns.SCORE,
