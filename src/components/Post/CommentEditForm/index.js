@@ -17,13 +17,6 @@ class CommentEditForm extends Component {
     commentBody: ''
   }
 
-  constructor(props, context) {
-    super(props, context)
-    this.state = {
-      commentBody: this.props.comment.body,
-    }
-  }
-
   handleFormChange(event) {
     this.setState({ [event.target.name] : event.target.value})
   }
@@ -31,14 +24,13 @@ class CommentEditForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { comment, updateComment, showCommentEditForm} = this.props
-    const { commentBody} = this.state
+    const { commentBody } = this.state
     updateComment(comment.id, comment.parentId, commentBody)
     showCommentEditForm('')
   }
 
   render(){
-    const { showCommentEditForm } = this.props
-    const { commentBody } = this.state
+    const { showCommentEditForm, comment } = this.props
     return(
       <form className="form comment-edit-form" onSubmit={this.handleSubmit}>
         <div className="form__block">
@@ -47,7 +39,7 @@ class CommentEditForm extends Component {
             className="textarea"
             required
             autoFocus
-            defaultValue={commentBody}
+            defaultValue={comment.body}
             onChange={event => this.handleFormChange(event)}
           />
         </div>

@@ -17,13 +17,6 @@ class CommentCreateForm extends Component {
     body: ''
   }
 
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      author: this.props.username,
-    }
-  }
-
   handleFormChange(event) {
     this.setState({ [event.target.name] : event.target.value})
   }

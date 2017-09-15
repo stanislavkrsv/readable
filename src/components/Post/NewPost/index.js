@@ -15,14 +15,6 @@ class NewPost extends Component {
     category : '',
   }
 
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      ...this.state,
-      author: this.props.username,
-    }
-  }
-
   componentDidMount() {
     const { fetchCategoriesIfNeeded } = this.props
     fetchCategoriesIfNeeded()
@@ -33,14 +25,14 @@ class NewPost extends Component {
   }
 
   handleSubmit = (e) => {
-    const { title, body, author, category} = this.state
+    const { title, body, author, category } = this.state
     const { makeCreatePostRequest } = this.props
     e.preventDefault();
     makeCreatePostRequest(title, body, author, category).then(()=> history.push('/'))
   }
 
   render(){
-    const { categories} = this.props
+    const { categories, username } = this.props
     return(
       <div className="content">
         <div className="post-form">
@@ -87,7 +79,7 @@ class NewPost extends Component {
               <label className="label">Author</label>
               <input
                 name="author"
-                defaultValue={this.state.author}
+                defaultValue={username}
                 onChange={event => this.handleFormChange(event)}
                 required
                 type="text"
@@ -105,7 +97,7 @@ class NewPost extends Component {
   }
 }
 
-function mapStateToProps({categories, user}, ownProps) {
+function mapStateToProps({categories, user}) {
   let defaultCategory = [{ name : 'Select category', path : '' }]
   return {
     categories: defaultCategory.concat(categories.items),
