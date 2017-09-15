@@ -2,6 +2,7 @@ import * as ReadableAPI from '../utils/ReadableAPI'
 import moment from 'moment'
 import uuidv4 from 'uuid/v4'
 import  { saveUserName } from './user'
+import  { deletePostsComments } from './comments'
 import {
   REQUEST_POSTS,
   RECEIVE_POSTS,
@@ -94,6 +95,7 @@ export const makeDeletePostRequest = (id) => (dispatch) => {
   dispatch(setPostOverlayBlock(id, true))
   return ReadableAPI.deletePost(id).then(() => {
     dispatch(deletePost(id))
+    dispatch(deletePostsComments(id))
   })
 }
 

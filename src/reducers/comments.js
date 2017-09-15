@@ -9,11 +9,12 @@ import {
   ADD_COMMENT,
   DELETE_COMMENT,
   UPDATE_COMMENT,
+  DELETE_POSTS_COMMENTS
 } from '../actions/types'
 
 const initialCommentsState = {
   sortBy : sortColumns.SCORE,
-  showNewCommentOverlayBlock: false
+  showNewCommentOverlayBlock: false,
 }
 
 function comments(state = initialCommentsState , action) {
@@ -37,7 +38,7 @@ function comments(state = initialCommentsState , action) {
         [postId]: {
           ...state[postId],
           isFetching: false,
-          items: comments,
+          items: comments.filter(comment => comment.deleted === false),
           init: true,
         }
       }
@@ -67,6 +68,11 @@ function comments(state = initialCommentsState , action) {
           ...state[postId],
           items: state[postId].items.map(comment => comment.id === id ? newComment : comment)
         }
+      }
+    case DELETE_POSTS_COMMENTS:
+      return {
+       ...state,
+        [postId] : undefined
       }
     case SET_COMMENT_SORT_COLUMN:
       return {

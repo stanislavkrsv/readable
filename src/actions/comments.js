@@ -8,6 +8,7 @@ import {
   ADD_COMMENT,
   DELETE_COMMENT,
   UPDATE_COMMENT,
+  DELETE_POSTS_COMMENTS,
   SET_COMMENT_SORT_COLUMN,
   VOTE_COMMENT,
   SET_COMMENT_OVERLAY_BLOCK,
@@ -110,6 +111,14 @@ export const makeDeleteCommentRequest = (id, postId) => (dispatch) => {
     dispatch(deleteComment(id, postId))
   })
 }
+
+/**
+ * Delete Post's comments
+ */
+export const deletePostsComments = (postId) => ({
+  type: DELETE_POSTS_COMMENTS,
+  postId: postId,
+})
 
 
 /**
