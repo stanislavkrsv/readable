@@ -36,15 +36,4 @@ class CommentActionButtons extends Component {
   }
 }
 
-function mapStateToProps() {
-  return {
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    makeDeleteCommentRequest: (id, postId) => dispatch(makeDeleteCommentRequest(id, postId)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommentActionButtons)
+export default connect(null, { makeDeleteCommentRequest })(CommentActionButtons)

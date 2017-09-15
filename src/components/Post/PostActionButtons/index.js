@@ -40,15 +40,5 @@ class PostActionButtons extends Component {
   }
 }
 
-function mapStateToProps() {
-  return {
-  }
-}
 
-function mapDispatchToProps(dispatch) {
-  return {
-    makeDeletePostRequest: (id) => dispatch(makeDeletePostRequest(id)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(PostActionButtons)
+export default connect(null, { makeDeletePostRequest })(PostActionButtons)

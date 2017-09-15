@@ -35,10 +35,4 @@ function mapStateToProps({comments}, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchCommentsIfNeeded: (postId) => dispatch(fetchCommentsIfNeeded(postId)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommentCount)
+export default connect(mapStateToProps, { fetchCommentsIfNeeded })(CommentCount)

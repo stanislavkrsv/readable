@@ -22,10 +22,10 @@ class CommentCreateForm extends Component {
   }
 
   handleSubmit = (e) => {
-    const { postId, createComment } = this.props
+    const { postId, makeCreateCommentRequest } = this.props
     const { author, body } = this.state
     e.preventDefault()
-    createComment(postId, author, body).then(() => {
+    makeCreateCommentRequest(postId, author, body).then(() => {
       this.refs.body.value = ''
       this.setState({body: ''})
     })
@@ -76,10 +76,4 @@ function mapStateToProps({ comments, user}) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    createComment: (postId, author, body) => dispatch(makeCreateCommentRequest(postId, author, body)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommentCreateForm)
+export default connect(mapStateToProps, { makeCreateCommentRequest })(CommentCreateForm)

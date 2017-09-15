@@ -55,14 +55,4 @@ class App extends Component {
   }
 }
 
-function mapStateToProps() {
-  return {
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchPostsIfNeeded: () => dispatch(fetchPostsIfNeeded()),
-  }
-}
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default withRouter(connect(null, { fetchPostsIfNeeded })(App))

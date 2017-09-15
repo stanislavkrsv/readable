@@ -23,9 +23,9 @@ class CommentEditForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    const { comment, updateComment, showCommentEditForm} = this.props
+    const { comment, makeUpdateCommentRequest, showCommentEditForm} = this.props
     const { commentBody } = this.state
-    updateComment(comment.id, comment.parentId, commentBody)
+    makeUpdateCommentRequest(comment.id, comment.parentId, commentBody)
     showCommentEditForm('')
   }
 
@@ -52,15 +52,4 @@ class CommentEditForm extends Component {
   }
 }
 
-function mapStateToProps() {
-  return {
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    updateComment: (id, postId, body) => dispatch(makeUpdateCommentRequest(id, postId, body)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommentEditForm)
+export default connect(null, { makeUpdateCommentRequest })(CommentEditForm)

@@ -74,10 +74,4 @@ function mapStateToProps({posts}, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    makeUpdatePostRequest : (id, title, body) => dispatch(makeUpdatePostRequest(id, title, body))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(EditPost)
+export default connect(mapStateToProps, { makeUpdatePostRequest })(EditPost)
